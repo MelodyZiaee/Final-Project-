@@ -8,22 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var UserName = ""
+    @State private var NameTitle = "What is your name?"
+    
     var body: some View {
-        VStack {
-            Text("What is your favorite color??")
-            TextField("", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                .multilineTextAlignment(.center)
-                .font(.title)
-                .border(Color.gray, width: 1)
-                .padding(15.0)
+      
+        NavigationStack {
             
-            Button(/*@START_MENU_TOKEN@*/"Button"/*@END_MENU_TOKEN@*/) {
-                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-            }
-            .font(.title2)
-           
-        }
-    }
+              
+                VStack {
+                    Text(NameTitle)
+                        .font(.title)
+                        .foregroundColor(Color(red: 1.0, green: 0.0, blue: 0.0, opacity: 1.0))
+                    TextField("", text: $UserName)
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .border(Color.gray, width: 1)
+                        .padding(15.0)
+                    
+                    Button("Submit Name") {
+                        NameTitle = "Welcome \(UserName)!"
+                    }
+                    .font(.title2)
+                    .tint(.purple)
+                    
+                }
+            
+        }}
 }
 
 #Preview {
