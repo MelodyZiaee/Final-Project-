@@ -19,7 +19,6 @@ struct ContentView: View {
                 VStack {
                     Text(NameTitle)
                         .font(.title)
-                        .foregroundColor(Color(red: 1.0, green: 0.0, blue: 0.0, opacity: 1.0))
                     TextField("", text: $UserName)
                         .multilineTextAlignment(.center)
                         .font(.title)
@@ -32,8 +31,26 @@ struct ContentView: View {
                     .font(.title2)
                     .tint(.purple)
                     
+                    
                 }
+            NavigationLink(destination: Quiz()) {
+                Text("Take Our Quiz!")
+            }
             
+            .padding(.top, 30.0)
+            HStack {
+                NavigationLink(destination: ResourcesPage()) {
+                    Text("Resources")
+                }
+                
+                NavigationLink(destination: FunFacts()) {
+                    Text("Fun Facts")
+                }
+             
+                
+            }
+          
+
         }}
 }
 

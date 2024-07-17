@@ -14,6 +14,9 @@
 		3119360A2C41C50600123D05 /* Final_Project__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311936092C41C50600123D05 /* Final_Project__Tests.swift */; };
 		311936142C41C50600123D05 /* Final_Project__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311936132C41C50600123D05 /* Final_Project__UITests.swift */; };
 		311936162C41C50600123D05 /* Final_Project__UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311936152C41C50600123D05 /* Final_Project__UITestsLaunchTests.swift */; };
+		36EC46422C4762AE00FE5D0E /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC46412C4762AE00FE5D0E /* Quiz.swift */; };
+		36EC46442C4762C700FE5D0E /* ResourcesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC46432C4762C700FE5D0E /* ResourcesPage.swift */; };
+		36EC46462C4762DA00FE5D0E /* FunFacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36EC46452C4762DA00FE5D0E /* FunFacts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		3119360F2C41C50600123D05 /* Final Project!!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Final Project!!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		311936132C41C50600123D05 /* Final_Project__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Project__UITests.swift; sourceTree = "<group>"; };
 		311936152C41C50600123D05 /* Final_Project__UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Final_Project__UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		36EC46412C4762AE00FE5D0E /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		36EC46432C4762C700FE5D0E /* ResourcesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourcesPage.swift; sourceTree = "<group>"; };
+		36EC46452C4762DA00FE5D0E /* FunFacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunFacts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				311935F82C41C50500123D05 /* Final_Project__App.swift */,
 				311935FA2C41C50500123D05 /* ContentView.swift */,
+				36EC46432C4762C700FE5D0E /* ResourcesPage.swift */,
+				36EC46452C4762DA00FE5D0E /* FunFacts.swift */,
+				36EC46412C4762AE00FE5D0E /* Quiz.swift */,
 				311935FC2C41C50600123D05 /* Assets.xcassets */,
 				311935FE2C41C50600123D05 /* Preview Content */,
 			);
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				311935FB2C41C50500123D05 /* ContentView.swift in Sources */,
+				36EC46462C4762DA00FE5D0E /* FunFacts.swift in Sources */,
 				311935F92C41C50500123D05 /* Final_Project__App.swift in Sources */,
+				36EC46442C4762C700FE5D0E /* ResourcesPage.swift in Sources */,
+				36EC46422C4762AE00FE5D0E /* Quiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
