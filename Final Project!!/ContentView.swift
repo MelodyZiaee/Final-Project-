@@ -23,7 +23,7 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .font(.title)
                         .border(Color.gray, width: 1)
-                        .padding(15.0)
+                        .padding(15.0) 
                     
                     Button("Submit Name") {
                         NameTitle = "Welcome \(UserName)!"
