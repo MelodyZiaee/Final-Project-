@@ -307,13 +307,34 @@ struct Quiz: View {
                             .font(.system(size: 30))
                             .multilineTextAlignment(.center)
                             
-                        
+                        HStack{
+                            NavigationLink (destination: FunFacts()){
+                                Text("STEM Careers")
+                                    .font(.title3)
+                                    .foregroundColor(Color("coral"))
+                                    .multilineTextAlignment(.center)
+                            }
+                            NavigationLink (destination: ResourcesPage()){
+                                Text("Resources")
+                                    .font(.title3)
+                                    .foregroundColor(Color("coral"))
+                                    .multilineTextAlignment(.center)
+                            }
+                            NavigationLink (destination: ContentView()){
+                                Text("Home")
+                                    .font(.title3)
+                                    .foregroundColor(Color("coral"))
+                                    .multilineTextAlignment(.center)
+                            }
+                        }
                     }
                 }
                
             }
         }
-            
+        .navigationTitle("Quiz")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
         }
         
     }
