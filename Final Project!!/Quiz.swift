@@ -35,7 +35,7 @@ struct Quiz: View {
                         .fontWeight(.black)
                         .padding(.top)
                         .scenePadding()
-                        .foregroundColor(Color("blue"))
+                        .foregroundColor(Color("bluey"))
                         .font(.title2)
                         .multilineTextAlignment(.center)
                     
@@ -58,7 +58,7 @@ struct Quiz: View {
                     .bold()
                     .font(.system(size: 30))
                     .foregroundColor(.white)
-                    .background(Color("pink"))
+                    .background(Color("pinky"))
                     
                     
                     
@@ -73,7 +73,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top)
                             .scenePadding()
-                            .foregroundColor(Color("blue"))
+                            .foregroundColor(Color("bluey"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         
@@ -96,7 +96,7 @@ struct Quiz: View {
                         .bold()
                         .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .background(Color("pink"))
+                        .background(Color("pinky"))
                         
                         
                     }
@@ -109,7 +109,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top, 40)
                             .scenePadding()
-                            .foregroundColor(Color("blue"))
+                            .foregroundColor(Color("bluey"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         Button("Organization") {
@@ -131,7 +131,7 @@ struct Quiz: View {
                         .bold()
                         .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .background(Color("pink"))
+                        .background(Color("pinky"))
                         
                         
                     }
@@ -144,7 +144,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top)
                             .scenePadding()
-                            .foregroundColor(Color("blue"))
+                            .foregroundColor(Color("bluey"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         
@@ -171,7 +171,7 @@ struct Quiz: View {
                                 .bold()
                                 .font(.system(size: 30))
                                 .foregroundColor(.white)
-                                .background(Color("pink"))
+                                .background(Color("pinky"))
                         }
                         
                         if showNew {
@@ -190,7 +190,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top, 100)
                             .scenePadding()
-                            .foregroundColor(Color("blue"))
+                            .foregroundColor(Color("bluey"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         
@@ -216,7 +216,7 @@ struct Quiz: View {
                                 .bold()
                                 .font(.system(size: 30))
                                 .foregroundColor(.white)
-                                .background(Color("pink"))
+                                .background(Color("pinky"))
                         }
                         
                         if showGroup {
@@ -283,7 +283,7 @@ struct Quiz: View {
                                 .fontWeight(.black)
                                 .padding(.all, 80)
                                 .scenePadding()
-                                .foregroundColor(Color("blue"))
+                                .foregroundColor(Color("bluey"))
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
                             
