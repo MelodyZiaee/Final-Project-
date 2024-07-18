@@ -18,9 +18,11 @@ struct Quiz: View {
     @State private var showGroup = false
     @State private var showInd = false
     @State private var check = false
+    @State private var showGrace = ""
+    @State private var showKat = ""
     
     
-    var body: some View { ScrollView {
+    var body: some View {
     
         ScrollView {
             VStack{
@@ -73,7 +75,7 @@ struct Quiz: View {
                         .multilineTextAlignment(.center)
                     Button("Space") {
                         SpaceSea = "🪐"
-                       
+                        
                     }
                     .padding(.horizontal)
                     .bold()
@@ -91,12 +93,12 @@ struct Quiz: View {
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
-                  
-                   
+                    
+                    
                 }
                 Text(SpaceSea)
                     .font(.system(size: 100))
-                .padding (40)
+                    .padding (40)
                 
                 VStack {
                     Text("When working on a project do you prefer heavy organization or adaptability?")
@@ -126,13 +128,13 @@ struct Quiz: View {
                     .font(.system(size: 30))
                     .foregroundColor(.white)
                     .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
-                  
-                   
+                    
+                    
                 }
                 Text(Organization)
                     .font(.system(size: 100))
-                .padding (40)
-        //Question 4
+                    .padding (40)
+                //Question 4
                 VStack {
                     Text("Would you rather create something or improving upon something existing?")
                         .fontWeight(.black)
@@ -144,7 +146,7 @@ struct Quiz: View {
                     
                     Button ( action: { showNew.toggle()
                         showInnovate = false
-                    
+                        
                     }) {
                         Text("Create!")
                             .padding(.horizontal)
@@ -178,7 +180,7 @@ struct Quiz: View {
                             .font(.system(size: 100))
                             .padding(.top)
                     }
-                   
+                    
                     
                     Text("Do you prefer working on things in groups or as the pioneer?")
                         .fontWeight(.black)
@@ -190,7 +192,7 @@ struct Quiz: View {
                     
                     Button ( action: { showGroup.toggle()
                         showInd = false
-                    
+                        
                     }) {
                         Text("Team!")
                             .padding(.horizontal)
@@ -226,7 +228,7 @@ struct Quiz: View {
                     }
                     
                     
-            //final button to compile results
+                    //final button to compile results
                     Button(action: {
                         grace = 0
                         katherine = 0
@@ -255,38 +257,58 @@ struct Quiz: View {
                         } else if showInd{
                             katherine += 1
                         }
-                        if grace > 2 {
-                            //Text("NavLink grace")
-                        }else if katherine > 2 {
-                           // Text("NavLink katherine")
-                        }
                         
                     }){
                         
-                        Text("Click for your Stem Woman!")
+                        Text("Click me to Compile Results")
                             .fontWeight(.black)
                             .padding(.top)
                             .scenePadding()
                             .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                            .font(.system(size: 50))
+                            .font(.headline)
                             .multilineTextAlignment(.center)
-                            
+                        
                     }
-
                     
-                    Text("Grace = \(grace)   Katherine = \(katherine)")
-                    
-                
-                        .padding (40)
                 }
             }
+            Button("Click Me!                                                                              Your Stem Woman Is...") {
+                if grace + katherine == 5 {
+                    if grace > 2 {
+                        showGrace = "Grace Hopper!"
+                    }
+                    if katherine > 2 {
+                        showKat = "Katherine Johnson!"
+                    }
+                }
+            }
+            .fontWeight(.black)
+            .padding(.top)
+            .scenePadding()
+            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+            .font(.headline)
+            .multilineTextAlignment(.center)
+            
+            Text(showGrace)
+                .fontWeight(.black)
+                .padding(.top)
+                .scenePadding()
+                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                .font(.system(size: 50))
+                .multilineTextAlignment(.center)
+            Text(showKat)
+                .fontWeight(.black)
+                .padding(.top)
+                .scenePadding()
+                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                .font(.system(size: 50))
+                .multilineTextAlignment(.center)
         }
         
             
         }
         
     }
-}
     
 #Preview {
     Quiz()
