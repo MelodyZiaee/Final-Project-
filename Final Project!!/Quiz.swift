@@ -23,11 +23,11 @@ struct Quiz: View {
     @State private var graceBio = ""
     @State private var katBio = ""
     
-    
     var body: some View {
         ScrollView {
             ZStack{
-                Color(Color(hue: 0.174, saturation: 0.1, brightness: 0.908))
+                Color("lightpink")
+                    .ignoresSafeArea()
                 VStack{
                     
                     //Question 1
@@ -35,30 +35,30 @@ struct Quiz: View {
                         .fontWeight(.black)
                         .padding(.top)
                         .scenePadding()
-                        .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                        .foregroundColor(Color("blue"))
                         .font(.title2)
                         .multilineTextAlignment(.center)
                     
                     
                     
                     Button("Extrovert") {
-                        placeholder = "Extrovert👩‍🔬"
+                        placeholder = "👩‍🔬"
                     }
                     .padding(.horizontal)
                     .bold()
                     .foregroundColor(.white)
-                    .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                    .background(Color("coral"))
                     .font(.system(size: 30))
                     .padding(.all)
                     
                     Button("Introvert") {
-                        placeholder = "Introvert👩‍🔬"
+                        placeholder = "💪"
                     }
                     .padding(.horizontal)
                     .bold()
                     .font(.system(size: 30))
                     .foregroundColor(.white)
-                    .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                    .background(Color("pink"))
                     
                     
                     
@@ -73,9 +73,10 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top)
                             .scenePadding()
-                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .foregroundColor(Color("blue"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
+                        
                         Button("Space") {
                             SpaceSea = "🪐"
                             
@@ -83,7 +84,7 @@ struct Quiz: View {
                         .padding(.horizontal)
                         .bold()
                         .foregroundColor(.white)
-                        .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                        .background(Color("coral"))
                         .font(.system(size: 30))
                         .padding(.all)
                         
@@ -95,7 +96,7 @@ struct Quiz: View {
                         .bold()
                         .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                        .background(Color("pink"))
                         
                         
                     }
@@ -108,7 +109,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top, 40)
                             .scenePadding()
-                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .foregroundColor(Color("blue"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         Button("Organization") {
@@ -118,7 +119,7 @@ struct Quiz: View {
                         .padding(.horizontal)
                         .bold()
                         .foregroundColor(.white)
-                        .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                        .background(Color("coral"))
                         .font(.system(size: 30))
                         .padding(.all)
                         
@@ -130,7 +131,7 @@ struct Quiz: View {
                         .bold()
                         .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                        .background(Color("pink"))
                         
                         
                     }
@@ -143,7 +144,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top)
                             .scenePadding()
-                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .foregroundColor(Color("blue"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         
@@ -156,7 +157,7 @@ struct Quiz: View {
                                 .bold()
                                 .buttonStyle(.bordered)
                                 .foregroundColor(.white)
-                                .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                                .background(Color("coral"))
                                 .font(.system(size: 30))
                                 .padding(.all)
                         }
@@ -170,7 +171,7 @@ struct Quiz: View {
                                 .bold()
                                 .font(.system(size: 30))
                                 .foregroundColor(.white)
-                                .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                                .background(Color("pink"))
                         }
                         
                         if showNew {
@@ -189,7 +190,7 @@ struct Quiz: View {
                             .fontWeight(.black)
                             .padding(.top, 100)
                             .scenePadding()
-                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .foregroundColor(Color("blue"))
                             .font(.title2)
                             .multilineTextAlignment(.center)
                         
@@ -201,7 +202,7 @@ struct Quiz: View {
                                 .padding(.horizontal)
                                 .bold()
                                 .foregroundColor(.white)
-                                .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                                .background(Color("coral"))
                                 .font(.system(size: 30))
                                 .padding(.all)
                         }
@@ -215,7 +216,7 @@ struct Quiz: View {
                                 .bold()
                                 .font(.system(size: 30))
                                 .foregroundColor(.white)
-                                .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                                .background(Color("pink"))
                         }
                         
                         if showGroup {
@@ -236,9 +237,9 @@ struct Quiz: View {
                             grace = 0
                             katherine = 0
                             //question 1
-                            if placeholder == "Extrovert👩‍🔬" {
+                            if placeholder == "👩‍🔬" {
                                 grace += 1
-                            } else if placeholder == "Introvert👩‍🔬" {
+                            } else if placeholder == "💪" {
                                 katherine += 1
                             }
                             //question 2
@@ -269,41 +270,41 @@ struct Quiz: View {
                             if grace + katherine == 5 {
                                 if grace > 2 {
                                     showGrace = "Grace Hopper!"
-                                    graceBio = "Scientist at NASA"
+                                    graceBio = "Grace Hopper was an American computer scientist and United States Navy rear admiral."
                                 }
                                 if katherine > 2 {
                                     showKat = "Katherine Johnson!"
-                                    katBio = "Something"
+                                    katBio = "Katherine Johnson was an American mathematician whose calculations of orbital mechanics were critical to the success of the first and subsequent U.S. crewed spaceflights."
                                 }
                             }
                             
                         }){
-                            
                             Text("Your Stem Woman is...")
                                 .fontWeight(.black)
                                 .padding(.all, 80)
-                                .padding(.bottom, 40)
                                 .scenePadding()
-                                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                                .foregroundColor(Color("blue"))
                                 .font(.headline)
                                 .multilineTextAlignment(.center)
                             
                         }
                     
-                            Text(showGrace)
+                        Text("\(showGrace)\n \n \(graceBio)")
                                 .fontWeight(.black)
                                 .padding(.top, 20)
-                                .scenePadding()
-                                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                                .font(.system(size: 50))
+                                .padding(.trailing, 20)
+                                .padding(.leading, 20)
+                                .font(.system(size: 30))
+                                .foregroundColor(Color("coral"))
                                 .multilineTextAlignment(.center)
                         
-                        Text(showKat)
+                        Text("\(showKat)\n \n \(katBio)")
                             .fontWeight(.black)
                             .padding(.bottom, 100)
-                            .scenePadding()
-                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                            .font(.system(size: 50))
+                            .padding(.trailing, 20)
+                            .padding(.leading, 20)
+                            .foregroundColor(Color("coral"))
+                            .font(.system(size: 30))
                             .multilineTextAlignment(.center)
                             
                         
