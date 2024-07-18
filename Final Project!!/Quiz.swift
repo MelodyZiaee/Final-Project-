@@ -20,62 +20,29 @@ struct Quiz: View {
     @State private var check = false
     @State private var showGrace = ""
     @State private var showKat = ""
+    @State private var graceBio = ""
+    @State private var katBio = ""
     
     
     var body: some View {
-    
         ScrollView {
-            VStack{
-                
-                //Question 1
-                Text("Are you an extrovert or an introvert?")
-                    .fontWeight(.black)
-                    .padding(.top)
-                    .scenePadding()
-                    .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                    .font(.title2)
-                    .multilineTextAlignment(.center)
-                
-                
-                
-                Button("Extrovert") {
-                    placeholder = "Extrovert👩‍🔬"
-                }
-                .padding(.horizontal)
-                .bold()
-                .foregroundColor(.white)
-                .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
-                .font(.system(size: 30))
-                .padding(.all)
-                
-                Button("Introvert") {
-                    placeholder = "Introvert👩‍🔬"
-                }
-                .padding(.horizontal)
-                .bold()
-                .font(.system(size: 30))
-                .foregroundColor(.white)
-                .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
-                
-                
-                
-                
-                Text(placeholder)
-                    .font(.system(size:50))
-                
-                    .padding (40)
-                //Question 4
-                VStack {
-                    Text("Do you prefer Space or the Sea?")
+            ZStack{
+                Color(Color(hue: 0.174, saturation: 0.1, brightness: 0.908))
+                VStack{
+                    
+                    //Question 1
+                    Text("Are you an extrovert or an introvert?")
                         .fontWeight(.black)
                         .padding(.top)
                         .scenePadding()
                         .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
                         .font(.title2)
                         .multilineTextAlignment(.center)
-                    Button("Space") {
-                        SpaceSea = "🪐"
-                        
+                    
+                    
+                    
+                    Button("Extrovert") {
+                        placeholder = "Extrovert👩‍🔬"
                     }
                     .padding(.horizontal)
                     .bold()
@@ -84,9 +51,8 @@ struct Quiz: View {
                     .font(.system(size: 30))
                     .padding(.all)
                     
-                    Button("Sea") {
-                        SpaceSea = "🌊"
-                        
+                    Button("Introvert") {
+                        placeholder = "Introvert👩‍🔬"
                     }
                     .padding(.horizontal)
                     .bold()
@@ -95,216 +61,257 @@ struct Quiz: View {
                     .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
                     
                     
-                }
-                Text(SpaceSea)
-                    .font(.system(size: 100))
-                    .padding (40)
-                
-                VStack {
-                    Text("When working on a project do you prefer heavy organization or adaptability?")
-                        .fontWeight(.black)
-                        .padding(.top, 40)
-                        .scenePadding()
-                        .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                        .font(.title2)
-                        .multilineTextAlignment(.center)
-                    Button("Organization") {
-                        Organization = "🌊"
-                        
-                    }
-                    .padding(.horizontal)
-                    .bold()
-                    .foregroundColor(.white)
-                    .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
-                    .font(.system(size: 30))
-                    .padding(.all)
-                    
-                    Button("Adaptabilty") {
-                        Organization = "🪐"
-                        
-                    }
-                    .padding(.horizontal)
-                    .bold()
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
-                    .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
                     
                     
-                }
-                Text(Organization)
-                    .font(.system(size: 100))
-                    .padding (40)
-                //Question 4
-                VStack {
-                    Text("Would you rather create something or improving upon something existing?")
-                        .fontWeight(.black)
-                        .padding(.top)
-                        .scenePadding()
-                        .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                        .font(.title2)
-                        .multilineTextAlignment(.center)
+                    Text(placeholder)
+                        .font(.system(size:50))
                     
-                    Button ( action: { showNew.toggle()
-                        showInnovate = false
-                        
-                    }) {
-                        Text("Create!")
-                            .padding(.horizontal)
-                            .bold()
-                            .buttonStyle(.bordered)
-                            .foregroundColor(.white)
-                            .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
-                            .font(.system(size: 30))
-                            .padding(.all)
-                    }
-                    
-                    Button (action: { showInnovate.toggle()
-                        showNew = false
-                        
-                    }) {
-                        Text("Improve!")
-                            .padding(.horizontal)
-                            .bold()
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
-                    }
-                    
-                    if showNew {
-                        Text("🪄")
-                            .font(.system(size: 100))
-                            .padding(.top)
-                    }
-                    else if showInnovate {
-                        Text("🛠️")
-                            .font(.system(size: 100))
-                            .padding(.top)
-                    }
-                    
-                    
-                    Text("Do you prefer working on things in groups or as the pioneer?")
-                        .fontWeight(.black)
-                        .padding(.top, 100)
-                        .scenePadding()
-                        .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                        .font(.title2)
-                        .multilineTextAlignment(.center)
-                    
-                    Button ( action: { showGroup.toggle()
-                        showInd = false
-                        
-                    }) {
-                        Text("Team!")
-                            .padding(.horizontal)
-                            .bold()
-                            .foregroundColor(.white)
-                            .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
-                            .font(.system(size: 30))
-                            .padding(.all)
-                    }
-                    
-                    Button (action: { showInd.toggle()
-                        showGroup = false
-                        
-                    }) {
-                        Text("Pioneer!")
-                            .padding(.horizontal)
-                            .bold()
-                            .font(.system(size: 30))
-                            .foregroundColor(.white)
-                            .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
-                    }
-                    
-                    if showGroup {
-                        Text(" 👭")
-                            .font(.system(size: 100))
-                            .padding(.top)
-                        
-                    }
-                    else if showInd {
-                        Text("👑")
-                            .font(.system(size: 100))
-                            .padding(.top)
-                    }
-                    
-                    
-                    //final button to compile results
-                    Button(action: {
-                        grace = 0
-                        katherine = 0
-                        if placeholder == "Extrovert👩‍🔬" {
-                            grace += 1
-                        } else if placeholder == "Introvert👩‍🔬" {
-                            katherine += 1
-                        }
-                        if SpaceSea == "🪐" {
-                            grace += 1
-                        }else if SpaceSea == "🌊" {
-                            katherine += 1
-                        }
-                        if Organization == "🪐" {
-                            grace += 1
-                        }else if Organization == "🌊" {
-                            katherine += 1
-                        }
-                        if showNew {
-                            grace += 1
-                        } else if showInnovate {
-                            katherine += 1
-                        }
-                        if showGroup {
-                            grace += 1
-                        } else if showInd{
-                            katherine += 1
-                        }
-                        
-                    }){
-                        
-                        Text("Click me to Compile Results")
+                        .padding (40)
+                    //Question 4
+                    VStack {
+                        Text("Do you prefer Space or the Sea?")
                             .fontWeight(.black)
                             .padding(.top)
                             .scenePadding()
                             .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                            .font(.headline)
+                            .font(.title2)
                             .multilineTextAlignment(.center)
+                        Button("Space") {
+                            SpaceSea = "🪐"
+                            
+                        }
+                        .padding(.horizontal)
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                        .font(.system(size: 30))
+                        .padding(.all)
+                        
+                        Button("Sea") {
+                            SpaceSea = "🌊"
+                            
+                        }
+                        .padding(.horizontal)
+                        .bold()
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                        .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                        
                         
                     }
+                    Text(SpaceSea)
+                        .font(.system(size: 100))
+                        .padding (40)
                     
-                }
-            }
-            Button("Click Me!                                                                              Your Stem Woman Is...") {
-                if grace + katherine == 5 {
-                    if grace > 2 {
-                        showGrace = "Grace Hopper!"
+                    VStack {
+                        Text("When working on a project do you prefer heavy organization or adaptability?")
+                            .fontWeight(.black)
+                            .padding(.top, 40)
+                            .scenePadding()
+                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
+                        Button("Organization") {
+                            Organization = "🧠"
+                            
+                        }
+                        .padding(.horizontal)
+                        .bold()
+                        .foregroundColor(.white)
+                        .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                        .font(.system(size: 30))
+                        .padding(.all)
+                        
+                        Button("Adaptabilty") {
+                            Organization = "🌀"
+                            
+                        }
+                        .padding(.horizontal)
+                        .bold()
+                        .font(.system(size: 30))
+                        .foregroundColor(.white)
+                        .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                        
+                        
                     }
-                    if katherine > 2 {
-                        showKat = "Katherine Johnson!"
+                    Text(Organization)
+                        .font(.system(size: 100))
+                        .padding (40)
+                    //Question 4
+                    VStack {
+                        Text("Would you rather create something or improving upon something existing?")
+                            .fontWeight(.black)
+                            .padding(.top)
+                            .scenePadding()
+                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
+                        
+                        Button ( action: { showNew.toggle()
+                            showInnovate = false
+                            
+                        }) {
+                            Text("Create!")
+                                .padding(.horizontal)
+                                .bold()
+                                .buttonStyle(.bordered)
+                                .foregroundColor(.white)
+                                .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                                .font(.system(size: 30))
+                                .padding(.all)
+                        }
+                        
+                        Button (action: { showInnovate.toggle()
+                            showNew = false
+                            
+                        }) {
+                            Text("Improve!")
+                                .padding(.horizontal)
+                                .bold()
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                        }
+                        
+                        if showNew {
+                            Text("🪄")
+                                .font(.system(size: 100))
+                                .padding(.top)
+                        }
+                        else if showInnovate {
+                            Text("🛠️")
+                                .font(.system(size: 100))
+                                .padding(.top)
+                        }
+                        
+                        
+                        Text("Do you prefer working on things in groups or as the pioneer?")
+                            .fontWeight(.black)
+                            .padding(.top, 100)
+                            .scenePadding()
+                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .font(.title2)
+                            .multilineTextAlignment(.center)
+                        
+                        Button ( action: { showGroup.toggle()
+                            showInd = false
+                            
+                        }) {
+                            Text("Team!")
+                                .padding(.horizontal)
+                                .bold()
+                                .foregroundColor(.white)
+                                .background(Color(hue: 0.005, saturation: 0.451, brightness: 1.0))
+                                .font(.system(size: 30))
+                                .padding(.all)
+                        }
+                        
+                        Button (action: { showInd.toggle()
+                            showGroup = false
+                            
+                        }) {
+                            Text("Pioneer!")
+                                .padding(.horizontal)
+                                .bold()
+                                .font(.system(size: 30))
+                                .foregroundColor(.white)
+                                .background(Color(hue: 0.658, saturation: 0.621, brightness: 0.505))
+                        }
+                        
+                        if showGroup {
+                            Text(" 👭")
+                                .font(.system(size: 100))
+                                .padding(.top)
+                            
+                        }
+                        else if showInd {
+                            Text("👑")
+                                .font(.system(size: 100))
+                                .padding(.top)
+                        }
+                        
+                        
+                        //final button to compile results
+                        Button(action: {
+                            grace = 0
+                            katherine = 0
+                            //question 1
+                            if placeholder == "Extrovert👩‍🔬" {
+                                grace += 1
+                            } else if placeholder == "Introvert👩‍🔬" {
+                                katherine += 1
+                            }
+                            //question 2
+                            if SpaceSea == "🪐" {
+                                grace += 1
+                            }else if SpaceSea == "🌊" {
+                                katherine += 1
+                            }
+                            //question 2
+                            if Organization == "🧠" {
+                                grace += 1
+                            }else if Organization == "🌀" {
+                                katherine += 1
+                            }
+                            //question 3
+                            if showNew {
+                                grace += 1
+                            } else if showInnovate {
+                                katherine += 1
+                            }
+                            //question 3
+                            if showGroup {
+                                grace += 1
+                            } else if showInd{
+                                katherine += 1
+                            }
+                            //choosing person
+                            if grace + katherine == 5 {
+                                if grace > 2 {
+                                    showGrace = "Grace Hopper!"
+                                    graceBio = "Scientist at NASA"
+                                }
+                                if katherine > 2 {
+                                    showKat = "Katherine Johnson!"
+                                    katBio = "Something"
+                                }
+                            }
+                            
+                        }){
+                            
+                            Text("Your Stem Woman is...")
+                                .fontWeight(.black)
+                                .padding(.all, 80)
+                                .padding(.bottom, 40)
+                                .scenePadding()
+                                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                            
+                        }
+                    
+                            Text(showGrace)
+                                .fontWeight(.black)
+                                .padding(.top, 20)
+                                .scenePadding()
+                                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                                .font(.system(size: 50))
+                                .multilineTextAlignment(.center)
+                        
+                        Text(showKat)
+                            .fontWeight(.black)
+                            .padding(.bottom, 100)
+                            .scenePadding()
+                            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
+                            .font(.system(size: 50))
+                            .multilineTextAlignment(.center)
+                            
+                        
                     }
                 }
+               
             }
-            .fontWeight(.black)
-            .padding(.top)
-            .scenePadding()
-            .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-            .font(.headline)
-            .multilineTextAlignment(.center)
-            
-            Text(showGrace)
-                .fontWeight(.black)
-                .padding(.top)
-                .scenePadding()
-                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                .font(.system(size: 50))
-                .multilineTextAlignment(.center)
-            Text(showKat)
-                .fontWeight(.black)
-                .padding(.top)
-                .scenePadding()
-                .foregroundColor(Color(hue: 0.927, saturation: 0.621, brightness: 1.0))
-                .font(.system(size: 50))
-                .multilineTextAlignment(.center)
         }
-        
             
         }
         
