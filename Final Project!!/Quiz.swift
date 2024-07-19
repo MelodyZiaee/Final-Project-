@@ -270,7 +270,7 @@ struct Quiz: View {
                             if grace + katherine == 5 {
                                 if grace > 2 {
                                     showGrace = "Grace Hopper!"
-                                    graceBio = "Grace Hopper was an American computer scientist and United States Navy rear admiral."
+                                    graceBio = "She was an American computer scientist and United States Navy rear admiral."
                                 }
                                 if katherine > 2 {
                                     showKat = "Katherine Johnson!"
@@ -300,9 +300,8 @@ struct Quiz: View {
                         
                         Text("\(showKat)\n \n \(katBio)")
                             .fontWeight(.black)
-                            .padding(.bottom, 100)
-                            .padding(.trailing, 20)
-                            .padding(.leading, 20)
+                            .padding(.bottom, 80)
+                        
                             .foregroundColor(Color("coral"))
                             .font(.system(size: 30))
                             .multilineTextAlignment(.center)
